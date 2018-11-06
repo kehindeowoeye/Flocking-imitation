@@ -1,0 +1,30 @@
+
+uv2 = xlsread('pigeon');
+xx = uv2(:,1:2:18);
+yy = uv2(:,2:2:18);
+
+h1 = animatedline('Marker','o','Color','y');
+h2 = animatedline('Marker','o','Color','r');
+h3 = animatedline('Marker','o','Color','b');
+h4 = animatedline('Marker','o','Color','c');
+h5 = animatedline('Marker','o','Color','g');
+h6 = animatedline('Marker','o','Color','g');
+h7 = animatedline('Marker','o','Color','g');
+h8 = animatedline('Marker','o','Color','g');
+h9 = animatedline('Marker','o','Color','g');
+
+for i = 1:2724
+    addpoints(h1, xx(i,1), yy(i,1));hold on;
+    addpoints(h2, xx(i,2), yy(i,2));hold on;
+    addpoints(h3, xx(i,3), yy(i,3));hold on;
+    addpoints(h4, xx(i,4), yy(i,4));hold on;
+    addpoints(h5, xx(i,5), yy(i,5));hold on;
+    addpoints(h6, xx(i,6), yy(i,6));hold on;
+    addpoints(h7, xx(i,7), yy(i,7));hold on;
+    addpoints(h8, xx(i,8), yy(i,8));hold on;
+    addpoints(h9, xx(i,9), yy(i,9));hold on;
+    drawnow update
+ 
+    xlabel('x-axis')
+    ylabel('y-axis')
+end
